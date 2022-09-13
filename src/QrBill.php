@@ -223,7 +223,7 @@ final class QrBill implements SelfValidatableInterface
             }
         }
 
-        //$qrCodeElements = array_merge([], $qrCodeElements);
+        $qrCodeElements = array_merge($qrCodeElements);
 
         array_walk($qrCodeElements, static function (&$string) {
             if (is_string($string)) {
