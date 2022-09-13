@@ -22,14 +22,16 @@ final class PaymentReference implements GroupSequenceProviderInterface, QrCodeab
 
     /**
      * Reference type
+     * @var string
      */
-    private string $type;
+    private $type;
 
     /**
      * Structured reference number
      * Either a QR reference or a Creditor Reference (ISO 11649)
+     * @var string|null
      */
-    private ?string $reference;
+    private $reference;
 
     private function __construct(string $type, ?string $reference)
     {

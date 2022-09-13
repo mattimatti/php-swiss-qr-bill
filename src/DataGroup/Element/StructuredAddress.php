@@ -17,35 +17,41 @@ final class StructuredAddress implements AddressInterface, SelfValidatableInterf
 
     /**
      * Name or company
+     * @var string
      */
-    private string $name;
+    private $name;
 
     /**
      * Street / P.O. box
      *
      * May not include building or house number.
+     * @var string|null
      */
-    private ?string $street;
+    private $street;
 
     /**
      * Building number
+     * @var string|null
      */
-    private ?string $buildingNumber;
+    private $buildingNumber;
 
     /**
      * Postal code without country code
+     * @var string
      */
-    private string $postalCode;
+    private $postalCode;
 
     /**
      * City
+     * @var string
      */
-    private string $city;
+    private $city;
 
     /**
      * Country (ISO 3166-1 alpha-2)
+     * @var string
      */
-    private string $country;
+    private $country;
 
     private function __construct(
         string $name,
@@ -97,7 +103,7 @@ final class StructuredAddress implements AddressInterface, SelfValidatableInterf
         );
     }
 
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -122,7 +128,7 @@ final class StructuredAddress implements AddressInterface, SelfValidatableInterf
         return $this->city;
     }
 
-    public function getCountry(): string
+    public function getCountry(): ?string
     {
         return $this->country;
     }

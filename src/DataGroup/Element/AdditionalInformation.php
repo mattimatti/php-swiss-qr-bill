@@ -17,14 +17,16 @@ final class AdditionalInformation implements QrCodeableInterface, SelfValidatabl
     /**
      * Unstructured information can be used to indicate the payment purpose
      * or for additional textual information about payments with a structured reference.
+     * @var string|null
      */
-    private ?string $message;
+    private $message;
 
     /**
      * Bill information contains coded information for automated booking of the payment.
      * The data is not forwarded with the payment.
+     * @var string|null
      */
-    private ?string $billInformation;
+    private $billInformation;
 
     private function __construct(
         ?string $message,

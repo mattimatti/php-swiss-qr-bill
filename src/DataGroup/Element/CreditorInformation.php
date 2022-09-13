@@ -15,8 +15,9 @@ final class CreditorInformation implements QrCodeableInterface, SelfValidatableI
 
     /**
      * IBAN or QR-IBAN of the creditor
+     * @var string
      */
-    private string $iban;
+    private $iban;
 
     private function __construct(string $iban)
     {

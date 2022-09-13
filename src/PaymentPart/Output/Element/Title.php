@@ -7,7 +7,10 @@ namespace Sprain\SwissQrBill\PaymentPart\Output\Element;
  */
 final class Title implements OutputElementInterface
 {
-    private string $title;
+    /**
+     * @var string
+     */
+    private $title;
 
     public static function create(string $title): self
     {

@@ -14,8 +14,14 @@ final class QrPaymentReferenceGenerator implements SelfValidatableInterface
 {
     use SelfValidatableTrait;
 
-    private ?string $customerIdentificationNumber = null;
-    private string $referenceNumber;
+    /**
+     * @var string|null
+     */
+    private $customerIdentificationNumber;
+    /**
+     * @var string
+     */
+    private $referenceNumber;
 
     public static function generate(?string $customerIdentificationNumber, string $referenceNumber): string
     {

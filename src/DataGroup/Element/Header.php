@@ -18,21 +18,24 @@ final class Header implements QrCodeableInterface, SelfValidatableInterface
 
     /**
      * Unambiguous indicator for the Swiss QR code.
+     * @var string
      */
-    private string $qrType;
+    private $qrType;
 
     /**
      * Version of the specifications (Implementation Guidelines) in use on
      * the date on which the Swiss QR code was created.
      * The first two positions indicate the main version, the following the
      * two positions the sub-version ("0200" for version 2.0).
+     * @var string
      */
-    private string $version;
+    private $version;
 
     /**
      * Character set code
+     * @var int
      */
-    private int $coding;
+    private $coding;
 
     private function __construct(string $qrType, string $version, int $coding)
     {

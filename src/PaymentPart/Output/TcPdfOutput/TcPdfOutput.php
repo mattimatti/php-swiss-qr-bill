@@ -48,9 +48,18 @@ final class TcPdfOutput extends AbstractOutput implements OutputInterface
     private const LINE_SPACING_RECEIPT = 3.5;
     private const LINE_SPACING_PAYMENT_PART = 4.8;
 
-    private TCPDF $tcPdf;
-    private float $offsetX;
-    private float $offsetY;
+    /**
+     * @var \TCPDF
+     */
+    private $tcPdf;
+    /**
+     * @var float
+     */
+    private $offsetX;
+    /**
+     * @var float
+     */
+    private $offsetY;
 
     public function __construct(
         QrBill $qrBill,

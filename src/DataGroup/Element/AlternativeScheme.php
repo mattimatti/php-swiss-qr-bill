@@ -14,8 +14,9 @@ final class AlternativeScheme implements QrCodeableInterface, SelfValidatableInt
 
     /**
      * Parameter character chain of the alternative scheme
+     * @var string
      */
-    private string $parameter;
+    private $parameter;
 
     private function __construct(string $parameter)
     {

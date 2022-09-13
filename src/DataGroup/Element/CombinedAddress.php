@@ -17,27 +17,31 @@ class CombinedAddress implements AddressInterface, SelfValidatableInterface, QrC
 
     /**
      * Name or company
+     * @var string
      */
-    private string $name;
+    private $name;
 
     /**
      * Address line 1
      *
      * Street and building number or P.O. Box
+     * @var string|null
      */
-    private ?string $addressLine1;
+    private $addressLine1;
 
     /**
      * Address line 2
      *
      * Postal code and town
+     * @var string
      */
-    private string $addressLine2;
+    private $addressLine2;
 
     /**
      * Country (ISO 3166-1 alpha-2)
+     * @var string
      */
-    private string $country;
+    private $country;
 
     private function __construct(
         string $name,
@@ -65,7 +69,7 @@ class CombinedAddress implements AddressInterface, SelfValidatableInterface, QrC
         );
     }
 
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -80,7 +84,7 @@ class CombinedAddress implements AddressInterface, SelfValidatableInterface, QrC
         return $this->addressLine2;
     }
 
-    public function getCountry(): string
+    public function getCountry(): ?string
     {
         return $this->country;
     }

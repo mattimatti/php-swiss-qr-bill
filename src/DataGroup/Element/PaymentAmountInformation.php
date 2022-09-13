@@ -17,13 +17,15 @@ final class PaymentAmountInformation implements QrCodeableInterface, SelfValidat
 
     /**
      * The payment amount due
+     * @var float|null
      */
-    private ?float $amount;
+    private $amount;
 
     /**
      * Payment currency code (ISO 4217)
+     * @var string
      */
-    private string $currency;
+    private $currency;
 
     private function __construct(string $currency, ?float $amount)
     {

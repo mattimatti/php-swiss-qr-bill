@@ -42,11 +42,26 @@ final class Placeholder implements OutputElementInterface
         'height' => 10
     ];
 
-    private string $type;
-    private string $fileSvg;
-    private string $filePng;
-    private int $width;
-    private int $height;
+    /**
+     * @var string
+     */
+    private $type;
+    /**
+     * @var string
+     */
+    private $fileSvg;
+    /**
+     * @var string
+     */
+    private $filePng;
+    /**
+     * @var int
+     */
+    private $width;
+    /**
+     * @var int
+     */
+    private $height;
 
     public static function create(array $type): self
     {

@@ -44,11 +44,23 @@ final class FpdfOutput extends AbstractOutput implements OutputInterface
     // Line spacing
     private const LINE_SPACING_RECEIPT = 3.4;
     private const LINE_SPACING_PAYMENT_PART = 4.8;
-    private float $amountLS = 0;
+    /**
+     * @var float
+     */
+    private $amountLS = 0;
 
-    private Fpdf $fpdf;
-    private float $offsetX;
-    private float $offsetY;
+    /**
+     * @var \Fpdf\Fpdf
+     */
+    private $fpdf;
+    /**
+     * @var float
+     */
+    private $offsetX;
+    /**
+     * @var float
+     */
+    private $offsetY;
 
     public function __construct(
         QrBill $qrBill,

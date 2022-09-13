@@ -11,7 +11,10 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
  */
 trait SelfValidatableTrait
 {
-    private ?ValidatorInterface $validator = null;
+    /**
+     * @var \Symfony\Component\Validator\Validator\ValidatorInterface|null
+     */
+    private $validator;
 
     public function getViolations(): ConstraintViolationListInterface
     {

@@ -25,15 +25,36 @@ final class QrBill implements SelfValidatableInterface
 {
     use SelfValidatableTrait;
 
-    private Header $header;
-    private ?CreditorInformation $creditorInformation = null;
-    private ?AddressInterface $creditor = null;
-    private ?PaymentAmountInformation $paymentAmountInformation = null;
-    private ?AddressInterface $ultimateDebtor = null;
-    private ?PaymentReference $paymentReference = null;
-    private ?AdditionalInformation $additionalInformation = null;
+    /**
+     * @var \Sprain\SwissQrBill\DataGroup\Element\Header
+     */
+    private $header;
+    /**
+     * @var \Sprain\SwissQrBill\DataGroup\Element\CreditorInformation|null
+     */
+    private $creditorInformation;
+    /**
+     * @var \Sprain\SwissQrBill\DataGroup\AddressInterface|null
+     */
+    private $creditor;
+    /**
+     * @var \Sprain\SwissQrBill\DataGroup\Element\PaymentAmountInformation|null
+     */
+    private $paymentAmountInformation;
+    /**
+     * @var \Sprain\SwissQrBill\DataGroup\AddressInterface|null
+     */
+    private $ultimateDebtor;
+    /**
+     * @var \Sprain\SwissQrBill\DataGroup\Element\PaymentReference|null
+     */
+    private $paymentReference;
+    /**
+     * @var \Sprain\SwissQrBill\DataGroup\Element\AdditionalInformation|null
+     */
+    private $additionalInformation;
     /** @var AlternativeScheme[] */
-    private array $alternativeSchemes = [];
+    private $alternativeSchemes = [];
 
     private function __construct(Header $header)
     {

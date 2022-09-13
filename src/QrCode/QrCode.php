@@ -26,10 +26,18 @@ final class QrCode
     private const SWISS_CROSS_LOGO_FILE = __DIR__ . '/../../assets/swiss-cross.optimized.png';
     private const PX_QR_CODE = 543;    // recommended 46x46 mm in px @ 300dpi – in pixel based outputs the final image size may be slightly different, depending on the qr code contents
     private const PX_SWISS_CROSS = 83; // recommended 7x7 mm in px @ 300dpi
-
-    private BaseQrCode $qrCode;
-    private Logo $qrCodeLogo;
-    private WriterInterface $qrCodeWriter;
+    /**
+     * @var BaseQrCode
+     */
+    private $qrCode;
+    /**
+     * @var \Endroid\QrCode\Logo\Logo
+     */
+    private $qrCodeLogo;
+    /**
+     * @var \Endroid\QrCode\Writer\WriterInterface
+     */
+    private $qrCodeWriter;
 
     public static function create(string $data, string $fileFormat = null): self
     {

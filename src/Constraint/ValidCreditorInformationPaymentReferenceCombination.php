@@ -9,7 +9,10 @@ use Symfony\Component\Validator\Constraint;
  */
 final class ValidCreditorInformationPaymentReferenceCombination extends Constraint
 {
-    public string $message = 'The payment reference type "{{ referenceType }}" does not match with the iban type of "{{ iban }}".';
+    /**
+     * @var string
+     */
+    public $message = 'The payment reference type "{{ referenceType }}" does not match with the iban type of "{{ iban }}".';
 
     public function getTargets(): string
     {

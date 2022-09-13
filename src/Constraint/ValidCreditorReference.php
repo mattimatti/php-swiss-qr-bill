@@ -9,5 +9,8 @@ use Symfony\Component\Validator\Constraint;
  */
 final class ValidCreditorReference extends Constraint
 {
-    public string $message = 'The string "{{ string }}" is not a valid Creditor Reference.';
+    /**
+     * @var string
+     */
+    public $message = 'The string "{{ string }}" is not a valid Creditor Reference.';
 }

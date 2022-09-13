@@ -20,7 +20,8 @@
         "friendsofphp/php-cs-fixer": "^3.4",
         "khanamiryan/qrcode-detector-decoder": "^1.0.3",
         "phpstan/phpstan": "^1.2",
-        "tecnickcom/tcpdf": "^6.3.2"
+        "tecnickcom/tcpdf": "^6.3.2",
+        "rector/rector": "^0.14.2"
     },
     "suggest": {
         "tecnickcom/tcpdf": "Needed to create pdfs with TcPdfOutput",
